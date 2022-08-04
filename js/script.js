@@ -17,7 +17,9 @@ const table = document.querySelector('.table'),
 function apiSearch() {
     fetch(`https://api.github.com/users/${searchInput.value}`)
         .then(res => res.json())
-        .then(JSON => infoTable.innerHTML = `
+        .then(JSON => 
+            
+            infoTable.innerHTML = `
             <div class="info-top">
                 <div class="user-main-info">
                     <div class="user-image">
@@ -77,9 +79,8 @@ function apiSearch() {
                     </div>
                 </div>
             </div>
-        `);
-
-
+        `
+        );
 
 
     searchInput.value = '';
@@ -98,5 +99,7 @@ searchBtn.addEventListener('click', apiSearch);
 window.addEventListener('keydown',(e) => {
     if (e.code === 'Enter') {
         apiSearch();
+    } else if (e.code === 'Escape') {
+        disabled();
     }
 });
