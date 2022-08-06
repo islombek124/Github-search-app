@@ -1,3 +1,10 @@
+@media screen and (max-width: 1440px) {
+    .directions
+    {
+        bottom: 15px;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .table
     {

@@ -58,7 +58,7 @@ function apiSearch() {
                 </div>
             </div>
             <div class="directions">
-                <div class="line 1">
+                <div class="line line__top">
                     <div class="item">
                         <img src="./icons/location.svg" alt="">
                         <p>${JSON.location === null || JSON.company === undefined ? 'Not Available' : JSON.location}</p>
@@ -68,7 +68,7 @@ function apiSearch() {
                         <a href="${JSON.blog === undefined || JSON.blog === '' ? null : `https://${JSON.blog}`}">${JSON.blog === undefined || JSON.blog === '' ? 'Not Available' : JSON.blog}</a>
                     </div>
                 </div>
-                <div class="line 2">
+                <div class="line line__bottom">
                     <div class="item">
                         <img src="./icons/twitter.svg" alt="">
                         <p>${JSON.twitter_username === undefined || JSON.twitter_username === null ? 'Not Available' : JSON.twitter_username}</p>
