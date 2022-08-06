@@ -103,3 +103,7 @@ window.addEventListener('keydown',(e) => {
         disabled();
     }
 });
+
+setTimeout(function() {
+    $('.loader_bg').fadeToggle();
+}, 1000);
