@@ -104,6 +104,10 @@ window.addEventListener('keydown',(e) => {
     }
 });
 
-setTimeout(function() {
-    $('.loader_bg').fadeToggle();
-}, 1000);
+let preloader = document.querySelector('.loader_bg');
+
+window.addEventListener('load', function(){
+    setTimeout(function(){
+        preloader.style.display = 'none';
+    }, 1000);
+});
